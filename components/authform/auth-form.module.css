@@ -1,0 +1,112 @@
+.container{
+  padding-left: 7rem;
+  padding-right: 7rem;
+  padding-bottom: 5rem;
+  padding-top: 5rem;
+  background-color: #f2f2f2;   
+}
+
+.auth {
+    margin: 3rem auto;
+    width: 95%;
+    max-width: 25rem;
+    border-radius: 1px;
+    background-color: #a4d7d6;
+    box-shadow: 0 4px 4px 0 rgba(123, 123, 123, 0.2);
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .auth h2 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: var(--global-text-font-family);
+    margin-bottom: 2rem;
+  }
+
+  .notify{
+    color: #21898e;
+  }
+  
+  .control {
+    margin-bottom: 0.5rem;
+  }
+  
+  .control label {
+    display: block;
+    color: rgb(0, 0, 0);   
+    margin-bottom: 0.5rem;
+    font-family: var(--global-text-font-family);
+  }
+  
+  .control input {
+    font: inherit;
+    background-color: #eeeeee;
+    border-radius: 1px;
+    border: 2px solid rgb(255, 255, 255);
+    width: 100%;
+    text-align: left;
+    padding: 0.25rem;
+  }
+  
+  .actions {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .actions button {
+    cursor: pointer;
+    font: inherit;
+    color: rgb(0, 0, 0);
+    background-color: #04AA6D;
+    border: 1px solid #04AA6D;
+    border-radius: 1px;
+    padding: 0.5rem 2.5rem;
+  }
+  
+  .actions button:hover {
+    background-color: #25983a;
+    color: white;
+  }
+  
+  .actions .toggle {
+    margin-top: 1rem;
+    background-color: transparent;
+    color: #0f2a30;  
+    border: none;
+    padding: 0.15rem 1.5rem;
+  }
+  
+  .actions .toggle:hover {
+    background-color: transparent;
+    text-decoration: underline;
+    color: #1f5560;
+  }
+
+  @media screen and (max-width: 1300px) {
+
+   
+    .container{
+      padding-left: 4rem;
+      padding-right: 4rem;
+      
+       
+    }
+   
+  }
+
+
+  @media screen and (max-width: 818px) {
+
+    .container{
+      padding-left: 1rem;
+      padding-right: 1rem;
+      
+       
+    }
+    
+   
+  }
+  

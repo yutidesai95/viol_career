@@ -1,0 +1,108 @@
+@import url('https://s3.amazonaws.com/clay.global/static/fonts/Graphik-Black-Web.woff2');
+@import url('https://s3.amazonaws.com/clay.global/static/fonts/Graphik-Regular-Web.woff2');
+@import url('https://s3.amazonaws.com/clay.global/static/fonts/Graphik-Semibold-Web.woff2');
+@import url('https://s3.amazonaws.com/clay.global/static/fonts/Graphik-Bold-Web.woff2');
+
+:root {
+  --global-font-color: #3b3b3b;
+  --global-text-font-family: 'Graphic-web', Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: 'Graphic-webNormal';
+  src: url('https://s3.amazonaws.com/clay.global/static/fonts/Graphik-Regular-Web.woff2') format('woff2'), url('https://s3.amazonaws.com/clay.global/static/fonts/Graphik-Regular-Web.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Graphic-web';
+  src: url('https://s3.amazonaws.com/clay.global/static/fonts/Graphik-Regular-Web.woff2') format('woff2'), url('https://s3.amazonaws.com/clay.global/static/fonts/Graphik-Regular-Web.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Graphic-web';
+  src: url('https://s3.amazonaws.com/clay.global/static/fonts/Graphik-Medium-Web.woff2') format('woff2'), url('https://s3.amazonaws.com/clay.global/static/fonts/Graphik-Medium-Web.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Graphic-web';
+  src: url('https://s3.amazonaws.com/clay.global/static/fonts/Graphik-Semibold-Web.woff2') format('woff2'), url('https://s3.amazonaws.com/clay.global/static/fonts/Graphik-Semibold-Web.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Graphic-web';
+  src: url('https://s3.amazonaws.com/clay.global/static/fonts/Graphik-Bold-Web.woff2') format('woff2'), url('https://s3.amazonaws.com/clay.global/static/fonts/Graphik-Bold-Web.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Graphic-web';
+  src: url('https://s3.amazonaws.com/clay.global/static/fonts/Graphik-Black-Web.woff2') format('woff2'), url('https://s3.amazonaws.com/clay.global/static/fonts/Graphik-Black-Web.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--global-text-font-family);
+    font-size: 18px;
+    text-rendering: optimizeSpeed;
+    color: var(--global-font-color);
+}
+
+p{
+  font-size: 1rem;
+        font-weight: normal;
+        font-family: var(--global-text-font-family);;
+        color: var(--global-font-color);
+        line-height: 1.4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body, body * { 
+  color:inherit;
+}
+
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+@media (max-width: 1400px) {
+
+  p{
+    font-size: 1.1rem;
+     
+  }
+  }
+
+@media (max-width: 1023px) {
+
+p{
+  font-size: 0.9rem;
+   
+}
+}
