@@ -1,15 +1,16 @@
 import Link from 'next/link';
 import { useState } from "react";
 import styles from '../../menu.module.css';
-import { useSession, signOut } from 'next-auth/client';
+//import Modalmenu from '../../../layo';
+//import { useSession, signOut } from 'next-auth/client';
 import Script from 'next/script'
 
 function Navbar(){
 
-    const [session, loading] = useSession();
-    function logoutHandler(){
-        signOut();
-    }
+    // const [session, loading] = useSession();
+    // function logoutHandler(){
+    //     signOut();
+    // }
     const [isOpen,setIsOpen] = useState(false);
     const openMenu= ()=> setIsOpen(!isOpen);
     return(
@@ -29,14 +30,32 @@ function Navbar(){
                   
                     <ul className={isOpen === false ? 
                             styles.navmenu : styles.navmenu +' '+ styles.active}>
-                       
+                        <li className={styles.navitem}>
+                            <Link href='https://www.viol.tech/'>
+                              <a className={isOpen === false ? 
+                                        styles.navlink : styles.navlink+' '+styles.active}
+                                        onClick={openMenu}>Viol Home</a>
+                            </Link>
+                        </li>
                         
-                        {session && (
+                        <li className={styles.navitem}>
+                           <Link href='https://www.viol.tech/about'>
+                             <a className={isOpen === false ? 
+                                        styles.navlink : styles.navlink+' '+styles.active}
+                                        onClick={openMenu}>About</a>
+                            </Link>
+                        </li>
+                        
+                     
+                        {/* <li className={styles.navitem}>
+                           <Modalmenu /> 
+                        </li> */}
+                        {/* {session && (
                             <li className={styles.navitem}>
                             <button className={styles.logoutbtn} onClick={logoutHandler}>Logout</button>
                             </li>
                         )}
-          
+           */}
                     </ul>
                     <button className={isOpen === false ? 
                                         styles.hamburger : styles.hamburger+' '+styles.active}
