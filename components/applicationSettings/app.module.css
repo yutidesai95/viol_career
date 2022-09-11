@@ -1,6 +1,6 @@
 .maincontainer{
-  padding-left: 6rem;
-  padding-right: 6rem;
+  padding-left: 7rem;
+  padding-right: 7rem;
   padding-bottom: 5rem;
   padding-top: 5rem;
   background-color: #f2f2f2;   
@@ -451,18 +451,40 @@
 
   .notify{
     margin: 9px;
-    font-size:1.0rem;
+    font-size:1rem;
     font-family: var(--global-text-font-family); 
     font-stretch: normal;
-    font-style: normal;
-    font-weight: 500;
+    font-weight: normal;
+    color: green;
   }
- 
-  @media screen and (max-width: 1200px) {
+
+  .note{
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    float: right;
+    font-weight: normal;
+  }
+
+  @media screen and (max-width: 1400px) {
 
     .maincontainer{
-      padding-left: 3rem;
-      padding-right: 3rem;
+      padding-left: 6rem;
+      padding-right: 6rem;
+    
+    }
+   
+  
+    .note{
+      font-size: 0.9rem;
+     
+    }
+  }
+ 
+  @media screen and (max-width: 1023px) {
+
+    .maincontainer{
+      padding-left: 4rem;
+      padding-right: 4rem;
     
     }
     
@@ -549,10 +571,14 @@
     .notify{
       margin: 8px;
       font-size:0.9rem;
-      font-family: var(--global-text-font-family); 
-      font-stretch: normal;
-      font-style: normal;
+      
       font-weight: 500;
+    }
+
+  
+    .note{
+      font-size: 0.7rem;
+  
     }
 
     .submit {
@@ -564,10 +590,7 @@
    
   }
   
-  
-
-  
-  @media screen and (max-width: 818px) {
+  @media screen and (max-width: 639px) {
 
     .maincontainer{
       padding-left: 1rem;
@@ -685,6 +708,14 @@
       width: 100%;
     }
 
+
+    .label{
+      font-size: 0.8rem;
+    }
+
+    .input{
+      font-size: 0.8rem;
+    }
     .notify{
       margin: 6px;
       font-size:0.8rem;
@@ -693,10 +724,22 @@
       font-style: normal;
       font-weight: 500;
     }
-    .submit {
-    
+  
+    .note{
+      font-size: 0.6rem;
+     
+    }
+
+    .disabledsubmit{
+      margin-top: 2rem;
       font-size: 0.8rem;
-      
+      float:none;
+    }
+
+    .submit {
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      float:none;
       }
   }
   

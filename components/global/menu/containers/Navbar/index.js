@@ -15,21 +15,49 @@ function Navbar(){
     const openMenu= ()=> setIsOpen(!isOpen);
     return(
       <header className={styles.header}>
-          <Script
-  src="./scripts/header.js"
-  strategy="beforeInteractive"
-/>
+      <Script
+        src="./scripts/header.js"
+        strategy="beforeInteractive"
+        />
                     <nav className={styles.navbar}>
-                    <div className={styles.navLt}>
+                    {/* <div className={styles.navLt}>
                     <Link className={styles.active} href='/'>
-                            <a >
-                                <img className={styles.navlogo} src="/images/Logo.png" alt="logo" width="120" height="35" />
+                            <a>
+                                <ul className={styles.parentLogoDiv}>
+                                <li className={styles.logoDiv}><img className={styles.navlogo} src="/images/VLogo.png" alt="logo" width="120" height="35" /></li>
+                                <li className={styles.textDiv}><p className={styles.navName}>Careers</p></li>
+                                </ul>
                             </a>
                     </Link>
-                    </div>
+                    </div> */}
+
+                    <ul className={styles.logomenu}>
+                        <li className={styles.logoMenuItem}>
+                            <Link href='/'>
+                              <a className={styles.navlogolink}><img className={styles.navlogo} src="/images/VLogo.png" alt="logo" width="120" height="35" /></a>
+                            </Link>
+                        </li>
+                        
+                        <li className={styles.logoMenuItem}>
+                           <Link href='/'>
+                             <a className={styles.navlogolink}>Careers</a>
+                            </Link>
+                        </li>
+                        
+                     
+                    
+                    </ul>
+
+
+
+                    
                   
                     <ul className={isOpen === false ? 
                             styles.navmenu : styles.navmenu +' '+ styles.active}>
+
+
+                       
+
                         <li className={styles.navitem}>
                             <Link href='https://www.viol.tech/'>
                               <a className={isOpen === false ? 

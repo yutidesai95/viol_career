@@ -356,10 +356,15 @@ function DynamicForm() {
         </form>    
        
           <div className={classes.row}>
-                <button className={disabled ? classes.disabledsubmit : classes.submit} onClick={handleAddFormSubmit} type="submit" disabled={disabled ? true : false}>Submit Details</button>         
-          </div>    
-       
-                 
+                <button className={disabled ? classes.disabledsubmit : classes.submit} onClick={handleAddFormSubmit} type="submit" disabled={disabled ? true : false}>Submit Details</button>                
+          </div> 
+
+          {disabled && (
+              <div className={classes.row}>   
+              <h6 className={classes.note}>Note: Fill out the required fields to enable the submit button</h6>         
+              </div>    
+          )}
+          
         </div>
         <div>{notification}</div>
         </div>

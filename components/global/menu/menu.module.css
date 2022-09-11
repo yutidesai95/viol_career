@@ -22,20 +22,22 @@ html:not([data-scroll='0']) .navbar {
     max-width: 1260px;
 }
 
-.navLt{
+/* .navLt{
     float: left;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
     height: 30px;
-    max-width: 60px;
-  
-}
+    max-width: 60px;  
+} */
+
+
+
+
 
 .hamburger {
     display: none;
 }
-
 
 .bar {
     display: block;
@@ -56,8 +58,38 @@ html:not([data-scroll='0']) .navbar {
     margin: 1rem 0rem;
 }
 
+.logomenu {
+    display: flex;
+    justify-content:flex-start; 
+    align-items:flex-end;
+    margin: 1rem 0rem;
+    padding-left: 0rem !important;
+}
+
+
+
+
 .navitem {
     margin-left: 0rem;
+  
+}
+
+
+.logoMenuItem {
+    margin-left: 0.1rem;
+   
+}
+
+.navlogolink{
+    color: var(--global-font-color);
+    transition: color .15s ease, background-color .15s ease;
+    font-family: var(--global-text-font-family);
+    font-size: 1.75rem;
+    transition: all 0.1s ease-in-out;
+}
+
+.navlogolink:hover{
+    color: var(--global-font-color);
 }
 
 .logoutbtn{
@@ -103,14 +135,12 @@ html:not([data-scroll='0']) .navbar {
     transition: all 0.1s ease-in-out;
 }
 
-
 .navlogo {
-    height: 30px;
+    height: 50px;
     width: auto;
     align-self: flex-start;
     text-align: start; 
 }
-
 
 .close, .hamburger {
     background: transparent;
@@ -127,11 +157,12 @@ html:not([data-scroll='0']) .navbar {
       outline: none;    
     }
     
-
-@media (max-width: 1400px) {
+    @media screen and (max-width: 1400px){
+    
     .btndesign {
         font-size: 1.4rem;
     }
+
     .navbar{
         padding-left: 6rem;
         padding-right: 6rem;
@@ -188,7 +219,7 @@ html:not([data-scroll='0']) .navbar {
   }
 
  
-  @media (max-width: 1023px) {
+  @media screen and (max-width: 1023px) {
     .btndesign{
         font-size: 1.2rem;
     }
@@ -196,6 +227,22 @@ html:not([data-scroll='0']) .navbar {
         padding-left: 4rem;
         padding-right: 4rem;
     }
+
+    .logomenu{
+        margin: 0rem 0rem;
+    }
+    .navlogo{
+        height:55px;
+        
+    }
+
+    .navlogolink{
+     
+        font-size: 1.7rem;
+     
+    }
+
+
     .navmenu {
         position: fixed;
         left: -100%;
@@ -247,7 +294,7 @@ html:not([data-scroll='0']) .navbar {
     }
 }
 
-@media (max-width: 639px) {
+@media screen and (max-width: 639px) {
     .btndesign{
         font-size: 1.2rem;
     }
@@ -257,8 +304,19 @@ html:not([data-scroll='0']) .navbar {
         padding-right: 2rem;
      
     }
+
+    .logomenu{
+        margin: 0rem 0rem;
+    }
     .navlogo{
-        height:25px;
+        height:45px;
+        
+    }
+
+    .navlogolink{
+     
+        font-size: 1.4rem;
+     
     }
     .navmenu {
         position: fixed;
