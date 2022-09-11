@@ -34,7 +34,7 @@ function Navbar(){
                     <ul className={styles.logomenu}>
                         <li className={styles.logoMenuItem}>
                             <Link href='/'>
-                              <a className={styles.navlogolink}><img className={styles.navlogo} src="/images/VLogo.png" alt="logo" width="120" height="35" /></a>
+                              <a><img className={styles.navlogo} src="/images/Vlogo.png" alt="Viollogo" width="120" height="35" /></a>
                             </Link>
                         </li>
                         
