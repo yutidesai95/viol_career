@@ -32,24 +32,19 @@ function Dashboard(){
     let content;
 
     if (requestStatus === 'pending') {
-      content = <div className={classes.maincontainer}>
-                <h4>Job Applications</h4>
+      content = 
+                
                 <div className={classes.load}>
                     <div className={classes.line}></div>
                     <div className={classes.line}></div>
                     <div className={classes.line}></div>
                 </div>               
-                </div>
+              
     }
 
     if (requestStatus === 'success') {
-      content =  <div className={classes.maincontainer}>
-         <div className={classes.heading0}>
-                <h5>TO GET ONBOARD</h5>
-            </div>     
-            <div className={classes.heading2}>
-                <h3>Checkout the active applications</h3>
-            </div>  
+      content =  <div className={classes.cardcontainer}>
+        
      
       {dashboardData && (
       [...dashboardData].reverse().map((dashboard, index) => 
@@ -74,7 +69,13 @@ function Dashboard(){
 
 
     return(
-       <div>
+       <div className={classes.maincontainer}>
+         <div className={classes.heading0}>
+                <h5>TO GET ONBOARD</h5>
+            </div>     
+            <div className={classes.heading2}>
+                <h3>Checkout the active applications</h3>
+            </div>  
         {content}
        </div>
     );
