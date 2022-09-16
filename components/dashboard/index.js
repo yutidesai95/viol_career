@@ -45,7 +45,6 @@ function Dashboard(){
     if (requestStatus === 'success') {
       content =  <div className={classes.cardcontainer}>
         
-     
       {dashboardData && (
       [...dashboardData].reverse().map((dashboard, index) => 
           (   
