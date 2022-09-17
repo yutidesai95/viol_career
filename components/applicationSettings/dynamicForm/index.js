@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import classes from '../../applicationSettings/app.module.css';
 import { useS3Upload } from "next-s3-upload";
+import styles from '../../dashboard/dashboard.module.css';
 
 async function createDynamicInfo(restFormFields) {
     const response = await fetch(`/api/dynamicForm/formInputData`, {
@@ -29,6 +30,7 @@ function DynamicForm() {
     const [selectedValue, setSelectedValue] = useState('');
     const [fileName, setFileName] = useState('');
     const [disabled, setDisabled] = useState(true);
+    const [fetchStatus, setFetchStatus] = useState('pending'); 
     const [urls, setUrls] = useState([]);
     const { uploadToS3 } = useS3Upload();
 
@@ -88,7 +90,9 @@ function DynamicForm() {
 
     useEffect(() => {
         if(finalFormIdSeperated){
+        setFetchStatus("pending");
         fetch(`/api/storeAppFields/${finalFormIdSeperated}`).then(response => response.json()).then(data => setFormFields(data))
+        setFetchStatus("success");
         }
        }, [finalFormIdSeperated]);
 
@@ -207,6 +211,18 @@ function DynamicForm() {
         <h4>Job role: {formNameSeperated}</h4>
         </div>
         <div className={classes.dynamicformcontainer}>
+
+        {fetchStatus === 'pending' && (
+           
+           <div className={styles.load}>
+               <div className={styles.line}></div>
+               <div className={styles.line}></div>
+               <div className={styles.line}></div>
+           </div>               
+      
+       )
+       }
+       {fetchStatus === 'success' && (
         <form>
         
         {formFields && (
@@ -354,6 +370,8 @@ function DynamicForm() {
             {notifyS3Upload}
                 
         </form>    
+       )}
+        
        
           <div className={classes.row}>
                 <button className={disabled ? classes.disabledsubmit : classes.submit} onClick={handleAddFormSubmit} type="submit" disabled={disabled ? true : false}>Submit Details</button>                
